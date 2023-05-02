@@ -262,7 +262,7 @@ class TrainValDataset(Dataset):
 
             cache_info = {"information": img_info, "image_hash": img_hash}
             # save valid image paths.
-            with open(valid_img_record, "w") as f:
+            with open(valid_img_record, "w+") as f:
                 json.dump(cache_info, f)
 
         # check and load anns
