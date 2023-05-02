@@ -216,7 +216,7 @@ class TrainValDataset(Dataset):
 
         assert osp.exists(img_dir), f"{img_dir} is an invalid directory path!"
         valid_img_record = osp.join(
-            osp.dirname(img_dir), "." + osp.basename(img_dir) + ".json"
+            osp.dirname(img_dir), "" + osp.basename(img_dir) + ".json"
         )
         NUM_THREADS = min(8, os.cpu_count())
 
